@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Rastreios - Câmara</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .search-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .search-box h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        input[type="text"] {
+            padding: 12px 15px;
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        button {
+            padding: 12px 25px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .status-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .status-box h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 8px 0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            margin-top: auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            text-align: center;
+            border-top: 4px solid #3498db;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-content p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .footer-link {
+            color: #3498db;
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .footer-link:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .search-box {
+                padding: 20px;
+            }
+            
+            input[type="text"] {
+                max-width: 100%;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>📋 Sistema de Rastreios - Câmara</h1>
+        <p>Acompanhamento de processos e documentos legislativos</p>
+    </header>
+    
+    <div class="container">
+        <div class="search-box">
+            <h2>Consultar Processo</h2>
+            <input type="text" placeholder="Digite o número do processo...">
+            <button>🔍 Buscar Processo</button>
+        </div>
+        
+        <div class="status-box">
+            <h3>Status do Sistema</h3>
+            <div class="status-item">
+                <span style="margin-right: 10px;">✅</span>
+                <span>Sistema em operação</span>
+            </div>
+            <div class="status-item">
+                <span style="margin-right: 10px;">🕒</span>
+                <span>Atualizado em tempo real</span>
+            </div>
+            <div class="status-item">
+                <span style="margin-right: 10px;">🔒</span>
+                <span>Conexão segura</span>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h4>Processos</h4>
+                <p>Acompanhe o andamento de processos legislativos</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h4>Relatórios</h4>
+                <p>Relatórios detalhados e estatísticas</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h4>Notificações</h4>
+                <p>Alertas sobre mudanças de status</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h4>Mobile</h4>
+                <p>Acesso otimizado para dispositivos móveis</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Sistema de Rastreios - Câmara dos Deputados</p>
+            <p>Sistema oficial de acompanhamento de processos legislativos</p>
+            <a href="https://www.siterastreio.com.br/" 
+               target="_blank" 
+               class="footer-link">
+               📦 Rastreamento
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Sistema de Rastreios - Câmara carregado!');
+            
+            const searchButton = document.querySelector('button');
+            const searchInput = document.querySelector('input[type="text"]');
+            
+            searchButton.addEventListener('click', function() {
+                if (searchInput.value.trim() === '') {
+                    alert('Por favor, digite um número de processo para buscar.');
+                } else {
+                    alert(`Buscar processo: ${searchInput.value}\n\nFuncionalidade em desenvolvimento!`);
+                }
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchButton.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
