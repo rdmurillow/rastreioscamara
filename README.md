@@ -57,3 +57,6 @@ Uma loja pode usar este script para:
 * Manter uma lista mestre de todos os pedidos enviados.
 * **Marcar manualmente** apenas os pedidos que precisam de atenção especial (`true` na Coluna 3).
 * Rodar o script uma vez ao dia para atualizar o status **apenas** dessas encomendas selecionadas, garantindo que a informação mais recente esteja sempre disponível para o time de atendimento.
+
+
+// https://candid-tulumba-b11a81.netlify.app/
